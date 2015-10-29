@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--> 
+<center>{{hallo}} {{nama}}
+    <br><br>
+        Nama <br>
+        <input class="input-lg" type="text" ng-model="model.nama"><br>
+        Rasa <br>
+        <input class="input-lg" type="text" ng-model="model.rasa"><br>
+        <button class="btn btn-primary" ng-click="simpan(model)">Simpan</button>
+        <br><br></center>
+
+        <button class="btn btn-primary" ng-click="tampilkanData()" style="margin-left: 100px;">Refresh</button><br><br>
+        <center>
+        <br><br>
+        
+        <table class="table table-striped table-bordered" style="width:70%;">
+       
+            <tr>
+            <td>Nama</td>
+            <td>Rasa</td>
+            <td>Action</td>
+            </tr>
+            <tr ng-repeat="buah in data">
+                <td>{{buah.nama}}</td>
+                <td>{{buah.rasa}}</td>
+                <td><button class="btn btn-danger" ng-click="hapusData(buah.id)">Hapus</button>
+                    <button class="btn btn-primary" ng-click="editData(buah)">Edit</button></td>
+            </tr>
+        </table>  
+        </center>
+        <br>
+        
